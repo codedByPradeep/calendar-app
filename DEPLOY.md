@@ -9,9 +9,10 @@ If Git is not installed, download and install it from:
 https://git-scm.com/downloads
 
 Verify installation:
+
 ```bash
 git --version
-
+```
 ## 2. Prepare the Project
 1. Open `vite.config.ts`.
 2. Add the `base` property with your repository name.
