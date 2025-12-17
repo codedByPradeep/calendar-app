@@ -1,9 +1,16 @@
 # How to Deploy to GitHub Pages
 
-Since git is not currently detected in your terminal, follow these steps to deploy your application.
+This document explains how the Calendar View project is deployed using GitHub Pages.
+
+---
 
 ## 1. Install Git
-If you haven't already, download and install Git from [git-scm.com](https://git-scm.com/downloads).
+If Git is not installed, download and install it from:
+https://git-scm.com/downloads
+
+Verify installation:
+```bash
+git --version
 
 ## 2. Prepare the Project
 1. Open `vite.config.ts`.
@@ -11,7 +18,7 @@ If you haven't already, download and install Git from [git-scm.com](https://git-
    ```typescript
    export default defineConfig({
      plugins: [react()],
-     base: '/your-repo-name/', // <--- REPLACE THIS with your repository name
+     base: 'calendar-view-pradeep',
    })
    ```
 
@@ -19,7 +26,7 @@ If you haven't already, download and install Git from [git-scm.com](https://git-
 1. Go to [GitHub.com](https://github.com) and sign in.
 2. In the top-right corner, click the **+** (plus) icon next to your profile picture.
 3. Select **New repository**.
-4. In the "Repository name" box, type: `calendar-app` (or any name you like).
+4. In the "Repository name" box, type: `calendar-view-pradeep` (or any name you like).
 5. (Optional) In the "Description" box, type: `React Calendar Component`.
 6. Enable "Public" (so your deployed site is visible).
 7. **Do NOT** check "Add a README file" or .gitignore (keep it empty).
@@ -35,7 +42,7 @@ After clicking "Create", you will see a page with commands. But first, **you mus
    git add .
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/calendar-app.git
+   git remote add origin https://github.com/codedByPradeep/calendar-view-pradeep.git
    git push -u origin main
    ```
    *(Copy the exact `git remote add...` line from the GitHub page you just created)*
@@ -48,4 +55,4 @@ npm run deploy
 This will create a `gh-pages` branch and publish your app.
 
 ## 6. Access Your Site
-Your app will be live at: `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
+Your app will be live at: `https://codedByPradeep.github.io/calendar-view-pradeep/`
